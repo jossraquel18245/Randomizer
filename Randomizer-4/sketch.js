@@ -42,10 +42,13 @@ function setup() {
   textSize(24);
   imageMode(CENTER);
   frameRate(4);
+  button=createButton('Click To Get A Flower');
+  button.position(900,500);
+  button.mousePressed(triggerRandomizer);
+  button.class("randomizerButton");
 
   //Set up the background and text for Click to get a Flower
   background(random(125, 136), random(205, 214), random(220, 250));
-  text("Click to Get a Flower", 250, 50);
 }
 
 function draw() {
@@ -58,7 +61,7 @@ function draw() {
 }
 
 
-function mousePressed() {
+function triggerRandomizer() {
   if (flowers.length > 0) {
     animating = true;
     setTimeout(randomizer, 2000);
