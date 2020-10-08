@@ -38,7 +38,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 750);
+  createCanvas(800, 800);
   textSize(24);
   imageMode(CENTER);
   frameRate(4);
